@@ -36,25 +36,29 @@ public class HolaMundo {
 		frame.setBounds(100, 100, 400, 200);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		Font font = new Font("Verdana", Font.BOLD, 24);
 		
-		JLabel lblName = new JLabel("Name");
+		Font fontTitle = new Font("Verdana", Font.BOLD, 24);
+		JLabel lblTitle = new JLabel("Hola Mundo!");
+		lblTitle.setFont(fontTitle);
+		lblTitle.setBounds(20, 31, 200, 30);
+		frame.getContentPane().add(lblTitle);
+		
+		Font font = new Font("Verdana", Font.PLAIN, 17);
+		JLabel lblName = new JLabel("Seleccionar el idioma");
 		lblName.setFont(font);
-		lblName.setBounds(20, 31, 100, 30);
+		lblName.setBounds(20, 70, 400, 30);
 		frame.getContentPane().add(lblName);
 		
 		JComboBox<String> comboBox = new JComboBox<String>();
-		comboBox.addItem("Select");
-		comboBox.addItem("Business");
-		comboBox.addItem("Engineer");
-		comboBox.addItem("Doctor");
-		comboBox.addItem("Student");
-		comboBox.addItem("Others");
+		for (String lag : Translate.getListaLenguajes()) {
+			comboBox.addItem(lag);
+		}
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
 			}
 		});
-		comboBox.setBounds(18, 80, 120, 20);
+		comboBox.setBounds(18, 110, 200, 20);
 		frame.getContentPane().add(comboBox);
 	}
 }
