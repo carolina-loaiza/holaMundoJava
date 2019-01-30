@@ -40,7 +40,7 @@ public class HolaMundo {
 		Font fontTitle = new Font("Verdana", Font.BOLD, 24);
 		JLabel lblTitle = new JLabel("¡Hola Mundo!");
 		lblTitle.setFont(fontTitle);
-		lblTitle.setBounds(20, 31, 200, 30);
+		lblTitle.setBounds(20, 31, 400, 30);
 		frame.getContentPane().add(lblTitle);
 		
 		Font font = new Font("Verdana", Font.PLAIN, 17);
