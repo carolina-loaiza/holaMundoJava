@@ -38,7 +38,7 @@ public class HolaMundo {
 		frame.getContentPane().setLayout(null);
 		
 		Font fontTitle = new Font("Verdana", Font.BOLD, 24);
-		JLabel lblTitle = new JLabel("Hola Mundo!");
+		JLabel lblTitle = new JLabel("¡Hola Mundo!");
 		lblTitle.setFont(fontTitle);
 		lblTitle.setBounds(20, 31, 200, 30);
 		frame.getContentPane().add(lblTitle);
@@ -55,7 +55,8 @@ public class HolaMundo {
 		}
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+				String texto = Translate.getTraducion(comboBox.getSelectedItem().toString());
+				lblTitle.setText(texto);
 			}
 		});
 		comboBox.setBounds(18, 110, 200, 20);
